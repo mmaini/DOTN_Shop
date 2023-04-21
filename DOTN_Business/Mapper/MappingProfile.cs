@@ -9,6 +9,7 @@ namespace DOTN_Business.Mapper
         public MappingProfile()
         {
             CreateMap<Category, CategoryDTO>().ReverseMap();
+            CreateMap<Product, ProductDTO>().ReverseMap();
         }
     }
 }
