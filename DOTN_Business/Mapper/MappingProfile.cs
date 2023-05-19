@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using DOTN_DataAccess;
 using DOTN_DataAccess.Data;
+using DOTN_DataAccess.ViewModel;
 using DOTN_Models;
 
 namespace DOTN_Business.Mapper
@@ -10,6 +12,9 @@ namespace DOTN_Business.Mapper
         {
             CreateMap<Category, CategoryDTO>().ReverseMap();
             CreateMap<Product, ProductDTO>().ReverseMap();
-        }
+			CreateMap<OrderHeaderDTO, OrderHeader>().ReverseMap();
+			CreateMap<OrderDetailDTO, OrderDetail>().ReverseMap();
+			CreateMap<OrderDTO, Order>().ReverseMap();
+		}
     }
 }

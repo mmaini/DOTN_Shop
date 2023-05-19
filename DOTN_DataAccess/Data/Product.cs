@@ -16,6 +16,7 @@ namespace DOTN_DataAccess.Data
         public bool CustomerFavorites { get; set; }
         public string Color { get; set; }
         public string ImageUrl { get; set; }
+        public double Price { get; set; }
         public int CategoryId { get; set; }
 
         [ForeignKey(nameof(CategoryId))]

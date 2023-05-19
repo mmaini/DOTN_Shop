@@ -21,4 +21,8 @@
     <ProjectReference Include="..\DOTN_Models\DOTN_Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\product\" />
+  </ItemGroup>
+
 </Project>

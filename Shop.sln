@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DOTN_DataAccess", "DOTN_Dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DOTN_Models", "DOTN_Models\DOTN_Models.csproj", "{7CBF8034-3B0C-43C9-8E06-73F42A8F12E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOTN_API", "DOTN_API\DOTN_API.csproj", "{EE4DE5C1-D281-4628-A533-E22231CD80F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOTN_Client", "DOTN_Client\DOTN_Client.csproj", "{97F7DBC3-09FA-4AA2-8E96-3BB65B58FEF4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{7CBF8034-3B0C-43C9-8E06-73F42A8F12E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CBF8034-3B0C-43C9-8E06-73F42A8F12E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CBF8034-3B0C-43C9-8E06-73F42A8F12E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE4DE5C1-D281-4628-A533-E22231CD80F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4DE5C1-D281-4628-A533-E22231CD80F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE4DE5C1-D281-4628-A533-E22231CD80F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE4DE5C1-D281-4628-A533-E22231CD80F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97F7DBC3-09FA-4AA2-8E96-3BB65B58FEF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97F7DBC3-09FA-4AA2-8E96-3BB65B58FEF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97F7DBC3-09FA-4AA2-8E96-3BB65B58FEF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97F7DBC3-09FA-4AA2-8E96-3BB65B58FEF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

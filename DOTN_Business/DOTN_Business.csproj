@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DOTN_Common\DOTN_Common.csproj" />
     <ProjectReference Include="..\DOTN_DataAccess\DOTN_DataAccess.csproj" />
     <ProjectReference Include="..\DOTN_Models\DOTN_Models.csproj" />
   </ItemGroup>

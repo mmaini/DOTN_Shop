@@ -72,6 +72,7 @@ namespace DOTN_Business.Repository
                 objFromDb.Color = objDto.Color;
                 objFromDb.ShopFavorites = objDto.ShopFavorites;
                 objFromDb.CustomerFavorites = objDto.CustomerFavorites;
+                objFromDb.Price = objDto.Price;
                 _dbContext.Products.Update(objFromDb);
                 await _dbContext.SaveChangesAsync();
                 return _mapper.Map<Product, ProductDTO>(objFromDb);

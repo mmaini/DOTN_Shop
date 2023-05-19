@@ -2,6 +2,8 @@ using DOTN_Business.Repository;
 using DOTN_Business.Repository.IRepository;
 using DOTN_DataAccess.Data;
 using DOTN_Shop.Data;
+using DOTN_Shop.Service.IService;
+using DOTN_Shop.Service;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +17,8 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddDbContext<AppDbContext>(options =>
 		options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddScoped<IFileUpload, FileUpload>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,6 +1,7 @@
 ﻿@page "/product"
 @inject IProductRepository _productRepository
 @inject IJSRuntime _jsRuntime
+@inject IFileUpload _fileUpload
 
 <_DeleteConfirmation IsParentProcessing="IsLoading" ConfirmationChanged="ConfirmDelete_Click"></_DeleteConfirmation>
 
@@ -21,6 +22,7 @@
                         <th>Shop Favorites</th>
                         <th>Customer Favorites</th>
                         <th>Category</th>
+                        <th>Price</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -40,6 +42,7 @@
                             <td>
                                 @prod.Category.Name
                             </td>
+                            <td>@prod.Price</td>
                             <td>
                                 <NavLink href="@($"product/edit/{prod.Id}")" class="btn btn-primary">Edit</NavLink>
                                 <button class="btn btn-danger" @onclick="() => HandleDelete(prod.Id)">Delete</button>
@@ -102,6 +105,11 @@
 
         if (isConfirmed && DeleteProductId != 0)
         {
+            ProductDTO product = await _productRepository.Get(DeleteProductId);
+            if (!product.ImageUrl.Contains("default.png"))
+            {
+                _fileUpload.DeleteFile(product.ImageUrl);
+            }
             //delete
             await _productRepository.Delete(DeleteProductId);
             await LoadProducts();
