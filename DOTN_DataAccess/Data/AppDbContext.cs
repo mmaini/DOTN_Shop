@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DOTN_DataAccess.Data
 {
-	public class AppDbContext : DbContext
+	public class AppDbContext : IdentityDbContext
 	{		
 		public AppDbContext(DbContextOptions<AppDbContext> options): base(options) { }
 
@@ -15,6 +16,7 @@ namespace DOTN_DataAccess.Data
         public DbSet<Product> Products { get; set; }
 		public DbSet<OrderHeader> OrderHeaders { get; set; }
 		public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
-	}
+    }
 }

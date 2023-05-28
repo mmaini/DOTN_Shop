@@ -24,20 +24,30 @@
                 <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
             </NavLink>
         </div>
+
+        <AuthorizeView Roles="@RoleAdmin">
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="/category">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Category
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="/product">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Product
+                </NavLink>
+            </div>
+        </AuthorizeView>
+
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="category">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Category
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="product">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Product
+            <NavLink class="nav-link" href="/orderList">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Order List
             </NavLink>
         </div>
     </nav>
 </div>
 
 @code {
+    private string RoleAdmin = SD.Role_Admin;
     private bool collapseNavMenu = true;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
